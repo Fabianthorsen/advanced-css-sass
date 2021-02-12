@@ -129,6 +129,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -137,6 +149,7 @@ body {
   padding: 15px 40px;
   border-radius: 80px;
   transition: all 0.1s ease-in-out;
+  position: relative;
 }
 
 .btn:hover {
@@ -152,4 +165,33 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777777;
+  animation: moveInBtn 0.8 ease-out;
+}
+
+.btn:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn-white:after {
+  background-color: #fff;
+}
+
+.btn:hover:after {
+  /* :after only on :hover */
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.8s ease-out 0.75s;
+  animation-fill-mode: backwards; /* Applies the styles before animation starts (opacity 0 and position) */
 }
