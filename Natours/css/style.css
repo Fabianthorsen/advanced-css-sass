@@ -25,6 +25,7 @@ body {
 /* ----------------------------------- */
 
 .header {
+  position: relative; /* Sets the origin for the position absolute */
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
@@ -40,4 +41,44 @@ body {
     100% 75vh,
     0 100%
   ); /* Creates the bottom cutout shape (bennettfeely.com/clippy/ for clip-path generator) */
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  filter: invert(1);
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%; /* In relation to parent element (.header) */
+  left: 50%; /* In relation to parent element (.header) */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* In relation to the element it self (.text-box) */
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.5px;
 }
