@@ -7,9 +7,9 @@
   box-sizing: inherit;
 }
 
+/* Defining what 1rem should be */
 html {
-  font-size: 62.5%; /* Setting font size for inheritance to use rem instead of px.*/
-  /* Use % to make sure that user can change default fontsize correctly */
+  font-size: 62.5%;
 }
 
 body {
