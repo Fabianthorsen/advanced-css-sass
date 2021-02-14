@@ -24,6 +24,20 @@
     background-color: $color-white;
     color: $color-grey-dark;
     animation: moveInBtn 0.8 ease-out;
+
+    &:after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    animation: moveInBtn 0.8 ease-out;
+
+    &:after {
+      background-color: $color-primary;
+    }
   }
 
   &:after {
@@ -37,10 +51,6 @@
     left: 0;
     z-index: -1;
     transition: all 0.3s;
-  }
-
-  &--white:after {
-    background-color: $color-white;
   }
 
   &:hover:after {
