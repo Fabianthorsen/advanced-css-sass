@@ -9,12 +9,10 @@
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 75vh,
-    0 100%
-  ); /* Creates the bottom cutout shape (bennettfeely.com/clippy/ for clip-path generator) */
+
+  /* Creates the bottom cutout shape (bennettfeely.com/clippy/ for clip-path generator) */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
     position: absolute;
