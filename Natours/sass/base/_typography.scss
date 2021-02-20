@@ -1,3 +1,11 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: $default-font-size; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -15,6 +23,11 @@
     animation-name: moveInLeft;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -25,15 +38,11 @@
 
     /* Animation - different syntax */
     animation: moveInRight 0.8s ease-out;
-  }
-}
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  /* font-size: $default-font-size; */
-  line-height: 1.7;
-  color: $color-grey-dark;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
 }
 
 .heading-secondary {
@@ -50,6 +59,14 @@ body {
   color: transparent;
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.2rem;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-tertiary {
